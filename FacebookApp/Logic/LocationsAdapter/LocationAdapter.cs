@@ -2,9 +2,7 @@
 {
     public class LocationAdapter : Location
     {
-        private StreetAdaptee _StreetAdaptee;
-        private CityAdaptee _CityAdaptee;
-        private CountyAdaptee _CountryAdaptee;
+        private LocationTypeContext m_LocationTypeContext;
         private LocationListFacade m_LocationListFacade;
         private string m_LocationType;
 
@@ -18,19 +16,18 @@
         {
             if (string.Equals(m_LocationType, "Country"))
             {
-                _CountryAdaptee = new CountyAdaptee();
-                _CountryAdaptee.AddCheckedInCountriesToList(m_LocationListFacade);
+                m_LocationTypeContext = new LocationTypeContext(new CountyAdaptee(), m_LocationListFacade);
             }
             else if (string.Equals(m_LocationType, "City"))
             {
-                _CityAdaptee = new CityAdaptee();
-                _CityAdaptee.AddCheckedInCitiesToList(m_LocationListFacade);
+                m_LocationTypeContext = new LocationTypeContext(new CityAdaptee(), m_LocationListFacade);
             }
             else if (string.Equals(m_LocationType, "Street"))
             {
-                _StreetAdaptee = new StreetAdaptee();
-                _StreetAdaptee.AddCheckedInStreetsToList(m_LocationListFacade);
+                m_LocationTypeContext = new LocationTypeContext(new StreetAdaptee(), m_LocationListFacade);
             }
+
+            m_LocationTypeContext.ContextInterface();
         }
     }
 }

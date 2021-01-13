@@ -8,7 +8,7 @@
     {
         private UpdatedUser m_UpdatedUser;
         Database db = Database.getInstance();
-        ConcreteSubject m_ObserversToUpdate = new ConcreteSubject();
+        ConcreteUpdatedUser m_ObserversToUpdate = new ConcreteUpdatedUser();
 
         public UpdateInfoTool(User i_UserToUpdate)
         {

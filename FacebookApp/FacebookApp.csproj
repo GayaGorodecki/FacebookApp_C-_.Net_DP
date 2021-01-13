@@ -7,11 +7,12 @@
     <ProjectGuid>{6979054C-4097-419E-A7DB-DACEFF375541}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>A21_Ex03_Gaya_206105371_Vladimir_317303071</RootNamespace>
-    <AssemblyName>A21 Ex03 Gaya 206105371 Vladimir 317303071</AssemblyName>
+    <RootNamespace>FacebookApp</RootNamespace>
+    <AssemblyName>FacebookApp</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -71,18 +71,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ConcreteSubject.cs" />
-    <Compile Include="LocationsAdapter\CityAdaptee.cs" />
-    <Compile Include="LocationsAdapter\CountyAdaptee.cs" />
-    <Compile Include="LocationsAdapter\LocationAdapter.cs" />
+    <Compile Include="Logic\LocationStrategy\LocationListStrategy.cs" />
+    <Compile Include="Logic\LocationStrategy\LocationTypeContext.cs" />
+    <Compile Include="Logic\UpdateUserObserver\ConcreteUpdatedUser.cs" />
+    <Compile Include="Logic\LocationsAdapter\CityAdaptee.cs" />
+    <Compile Include="Logic\LocationsAdapter\CountyAdaptee.cs" />
+    <Compile Include="Logic\LocationsAdapter\LocationAdapter.cs" />
     <Compile Include="Logic\LocationListFacade.cs" />
     <Compile Include="Logic\AppLogic.cs" />
     <Compile Include="Model\AppUser.cs" />
     <Compile Include="Model\Database.cs" />
-    <Compile Include="LocationsAdapter\Location.cs" />
-    <Compile Include="LocationsAdapter\StreetAdaptee.cs" />
-    <Compile Include="Model\Observer.cs" />
-    <Compile Include="Model\Subject.cs" />
+    <Compile Include="Logic\LocationsAdapter\Location.cs" />
+    <Compile Include="Logic\LocationsAdapter\StreetAdaptee.cs" />
+    <Compile Include="Logic\UpdateUserObserver\UpdateInfoObserver.cs" />
+    <Compile Include="Logic\UpdateUserObserver\UpdateInfoSubject.cs" />
     <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

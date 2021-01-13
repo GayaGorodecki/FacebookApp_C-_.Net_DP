@@ -4,12 +4,14 @@
     using System.IO;
     using System.Xml.Serialization;
 
-    public class Database : Observer
+    public class Database : UpdateInfoObserver
     {
         private static Database m_Instance;
         private List<UpdatedUser> m_UpdatedUsers;
         private static string s_Path = Directory.GetCurrentDirectory() + "\\UpdatedUsers.xml";
         private UpdatedUser m_UserToUpdate;
+
+        public ConcreteUpdatedUser Subject { get; set; }
 
         public static Database getInstance()
         {
@@ -23,8 +25,6 @@
             return m_Instance;
         }
 
-        public ConcreteSubject Subject { get; set; }
-
         public void AddNewUser(UpdatedUser i_UpdatedUser)
         {
             m_UpdatedUsers = LoadUserData();
@@ -34,7 +34,7 @@
 
         public override void Update()
         {
-            m_UserToUpdate = Subject.SubjectState;
+            m_UserToUpdate = Subject.UserToUpdate;
 
             m_UpdatedUsers = LoadUserData();
 

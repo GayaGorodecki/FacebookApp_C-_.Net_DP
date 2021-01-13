@@ -2,9 +2,9 @@
 {
     using FacebookWrapper.ObjectModel;
 
-    public class StreetAdaptee
+    public class StreetAdaptee : LocationListStrategy
     {
-        public void AddCheckedInStreetsToList(LocationListFacade i_LocationListFacade)
+        public override void AddCheckedInLocationToList(LocationListFacade i_LocationListFacade)
         {
             i_LocationListFacade.ErrorMessage = "No pictures with street location";
             foreach (Checkin checkin in i_LocationListFacade.AppUser.LoggedInUser.Checkins)
