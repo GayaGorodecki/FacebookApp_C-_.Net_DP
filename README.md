@@ -10,6 +10,6 @@ In addition, you can find photos by location (country / city / street), choose, 
 This project designed and built as project in Design Pattern academic course.
 
 
-# Design Pattern
+# Design Patterns
 
 Adaptor | singltone | observer | Iterator | Strategy | Facade
