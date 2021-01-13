@@ -48,17 +48,10 @@
 
         public void AddPhotosUrlToList(string i_ChosenLocation)
         {
-            foreach (Checkin checkin in AppUser.LoggedInUser.Checkins)
+            UserCheckins userCheckins = new UserCheckins(AppUser, i_ChosenLocation);
+            foreach (Checkin checkin in userCheckins)
             {
-                if (checkin.Place != null && checkin.PictureURL != null)
-                {
-                    if (string.Equals(checkin.Place.Location.Country, i_ChosenLocation)
-                        || string.Equals(checkin.Place.Location.City, i_ChosenLocation)
-                        || string.Equals(checkin.Place.Location.Street, i_ChosenLocation))
-                    {
-                        UrlListOfPhotos.Add(checkin.PictureURL);
-                    }
-                }
+                UrlListOfPhotos.Add(checkin.PictureURL);
             }
         }
     }

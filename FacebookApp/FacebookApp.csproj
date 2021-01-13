@@ -79,6 +79,7 @@
     <Compile Include="Logic\LocationsAdapter\LocationAdapter.cs" />
     <Compile Include="Logic\LocationListFacade.cs" />
     <Compile Include="Logic\AppLogic.cs" />
+    <Compile Include="Logic\UserCheckins.cs" />
     <Compile Include="Model\AppUser.cs" />
     <Compile Include="Model\Database.cs" />
     <Compile Include="Logic\LocationsAdapter\Location.cs" />

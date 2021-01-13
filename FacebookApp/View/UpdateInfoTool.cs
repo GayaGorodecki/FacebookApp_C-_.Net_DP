@@ -61,7 +61,7 @@
                 m_UpdatedUser.Email = textBoxEmail.Text;
             }
 
-            m_ObserversToUpdate.SubjectState = m_UpdatedUser;
+            m_ObserversToUpdate.UserToUpdate = m_UpdatedUser;
             m_ObserversToUpdate.Notify();
 
             MessageBox.Show("Your Information Changed!");
