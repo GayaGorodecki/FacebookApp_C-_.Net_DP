@@ -284,7 +284,7 @@
             // 
             this.listBoxLocations.FormattingEnabled = true;
             this.listBoxLocations.ItemHeight = 24;
-            this.listBoxLocations.Location = new System.Drawing.Point(25, 68);
+            this.listBoxLocations.Location = new System.Drawing.Point(25, 73);
             this.listBoxLocations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxLocations.Name = "listBoxLocations";
             this.listBoxLocations.Size = new System.Drawing.Size(228, 244);
