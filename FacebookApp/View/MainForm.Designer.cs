@@ -52,12 +52,13 @@
             this.pictureBoxLocation = new System.Windows.Forms.PictureBox();
             this.comboBoxLocationType = new System.Windows.Forms.ComboBox();
             this.tabPagePosts = new System.Windows.Forms.TabPage();
+            this.buttonFetchPosts = new System.Windows.Forms.Button();
+            this.panelBackground = new System.Windows.Forms.Panel();
             this.panelPostsInfo = new System.Windows.Forms.Panel();
             this.descriptionRichTextBox = new System.Windows.Forms.RichTextBox();
             this.postBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.createdTimeDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.messageTextBox = new System.Windows.Forms.TextBox();
-            this.buttonFetchPosts = new System.Windows.Forms.Button();
             this.listBoxPosts = new System.Windows.Forms.ListBox();
             this.buttonLogout = new System.Windows.Forms.Button();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -72,6 +73,7 @@
             this.tabFindByLocation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLocation)).BeginInit();
             this.tabPagePosts.SuspendLayout();
+            this.panelBackground.SuspendLayout();
             this.panelPostsInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).BeginInit();
             this.flowLayoutPanel.SuspendLayout();
@@ -105,7 +107,7 @@
             this.tabControlUpdateInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControlUpdateInfo.Name = "tabControlUpdateInfo";
             this.tabControlUpdateInfo.SelectedIndex = 0;
-            this.tabControlUpdateInfo.Size = new System.Drawing.Size(856, 351);
+            this.tabControlUpdateInfo.Size = new System.Drawing.Size(875, 369);
             this.tabControlUpdateInfo.TabIndex = 0;
             this.tabControlUpdateInfo.Visible = false;
             // 
@@ -127,7 +129,7 @@
             this.tabProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabProfile.Name = "tabProfile";
             this.tabProfile.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabProfile.Size = new System.Drawing.Size(848, 314);
+            this.tabProfile.Size = new System.Drawing.Size(867, 332);
             this.tabProfile.TabIndex = 0;
             this.tabProfile.Text = "Profile";
             this.tabProfile.UseVisualStyleBackColor = true;
@@ -156,7 +158,7 @@
             this.buttonChangeInfo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonChangeInfo.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonChangeInfo.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonChangeInfo.Location = new System.Drawing.Point(206, 232);
+            this.buttonChangeInfo.Location = new System.Drawing.Point(190, 246);
             this.buttonChangeInfo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonChangeInfo.Name = "buttonChangeInfo";
             this.buttonChangeInfo.Size = new System.Drawing.Size(161, 60);
@@ -246,7 +248,7 @@
             this.profilePictureBox.Location = new System.Drawing.Point(566, 26);
             this.profilePictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.profilePictureBox.Name = "profilePictureBox";
-            this.profilePictureBox.Size = new System.Drawing.Size(261, 268);
+            this.profilePictureBox.Size = new System.Drawing.Size(281, 280);
             this.profilePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.profilePictureBox.TabIndex = 0;
             this.profilePictureBox.TabStop = false;
@@ -262,14 +264,14 @@
             this.tabFindByLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabFindByLocation.Name = "tabFindByLocation";
             this.tabFindByLocation.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabFindByLocation.Size = new System.Drawing.Size(848, 314);
+            this.tabFindByLocation.Size = new System.Drawing.Size(867, 332);
             this.tabFindByLocation.TabIndex = 1;
             this.tabFindByLocation.Text = "Find Pictures By Location";
             this.tabFindByLocation.UseVisualStyleBackColor = true;
             // 
             // buttonCropAndSaveImg
             // 
-            this.buttonCropAndSaveImg.Location = new System.Drawing.Point(645, 164);
+            this.buttonCropAndSaveImg.Location = new System.Drawing.Point(708, 168);
             this.buttonCropAndSaveImg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCropAndSaveImg.Name = "buttonCropAndSaveImg";
             this.buttonCropAndSaveImg.Size = new System.Drawing.Size(128, 66);
@@ -285,13 +287,13 @@
             this.listBoxLocations.Location = new System.Drawing.Point(25, 68);
             this.listBoxLocations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listBoxLocations.Name = "listBoxLocations";
-            this.listBoxLocations.Size = new System.Drawing.Size(214, 220);
+            this.listBoxLocations.Size = new System.Drawing.Size(228, 244);
             this.listBoxLocations.TabIndex = 3;
             this.listBoxLocations.SelectedIndexChanged += new System.EventHandler(this.listBoxLocations_SelectedIndexChanged);
             // 
             // buttonPause
             // 
-            this.buttonPause.Location = new System.Drawing.Point(645, 68);
+            this.buttonPause.Location = new System.Drawing.Point(708, 68);
             this.buttonPause.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPause.Name = "buttonPause";
             this.buttonPause.Size = new System.Drawing.Size(128, 51);
@@ -304,10 +306,10 @@
             // 
             this.pictureBoxLocation.BackColor = System.Drawing.Color.LightGray;
             this.pictureBoxLocation.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxLocation.Location = new System.Drawing.Point(274, 25);
+            this.pictureBoxLocation.Location = new System.Drawing.Point(288, 25);
             this.pictureBoxLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxLocation.Name = "pictureBoxLocation";
-            this.pictureBoxLocation.Size = new System.Drawing.Size(332, 263);
+            this.pictureBoxLocation.Size = new System.Drawing.Size(391, 286);
             this.pictureBoxLocation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLocation.TabIndex = 1;
             this.pictureBoxLocation.TabStop = false;
@@ -322,22 +324,45 @@
             this.comboBoxLocationType.Location = new System.Drawing.Point(25, 25);
             this.comboBoxLocationType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLocationType.Name = "comboBoxLocationType";
-            this.comboBoxLocationType.Size = new System.Drawing.Size(214, 32);
+            this.comboBoxLocationType.Size = new System.Drawing.Size(228, 32);
             this.comboBoxLocationType.TabIndex = 0;
             this.comboBoxLocationType.Text = "Choose Location Type";
             this.comboBoxLocationType.SelectedIndexChanged += new System.EventHandler(this.comboBoxLocation_SelectedIndexChanged);
             // 
             // tabPagePosts
             // 
-            this.tabPagePosts.Controls.Add(this.panelPostsInfo);
             this.tabPagePosts.Controls.Add(this.buttonFetchPosts);
-            this.tabPagePosts.Controls.Add(this.listBoxPosts);
+            this.tabPagePosts.Controls.Add(this.panelBackground);
             this.tabPagePosts.Location = new System.Drawing.Point(4, 33);
             this.tabPagePosts.Name = "tabPagePosts";
-            this.tabPagePosts.Size = new System.Drawing.Size(848, 314);
+            this.tabPagePosts.Size = new System.Drawing.Size(867, 332);
             this.tabPagePosts.TabIndex = 2;
             this.tabPagePosts.Text = "Posts";
             this.tabPagePosts.UseVisualStyleBackColor = true;
+            // 
+            // buttonFetchPosts
+            // 
+            this.buttonFetchPosts.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.buttonFetchPosts.Font = new System.Drawing.Font("Calibri Light", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFetchPosts.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonFetchPosts.Location = new System.Drawing.Point(18, 12);
+            this.buttonFetchPosts.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonFetchPosts.Name = "buttonFetchPosts";
+            this.buttonFetchPosts.Size = new System.Drawing.Size(161, 36);
+            this.buttonFetchPosts.TabIndex = 12;
+            this.buttonFetchPosts.Text = "Fetch Posts";
+            this.buttonFetchPosts.UseVisualStyleBackColor = false;
+            this.buttonFetchPosts.Click += new System.EventHandler(this.buttonFetchPosts_Click);
+            // 
+            // panelBackground
+            // 
+            this.panelBackground.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panelBackground.Controls.Add(this.panelPostsInfo);
+            this.panelBackground.Controls.Add(this.listBoxPosts);
+            this.panelBackground.Location = new System.Drawing.Point(3, 55);
+            this.panelBackground.Name = "panelBackground";
+            this.panelBackground.Size = new System.Drawing.Size(854, 261);
+            this.panelBackground.TabIndex = 3;
             // 
             // panelPostsInfo
             // 
@@ -348,7 +373,7 @@
             this.panelPostsInfo.Controls.Add(this.createdTimeDateTimePicker);
             this.panelPostsInfo.Controls.Add(messageLabel);
             this.panelPostsInfo.Controls.Add(this.messageTextBox);
-            this.panelPostsInfo.Location = new System.Drawing.Point(366, 58);
+            this.panelPostsInfo.Location = new System.Drawing.Point(363, 7);
             this.panelPostsInfo.Name = "panelPostsInfo";
             this.panelPostsInfo.Size = new System.Drawing.Size(470, 244);
             this.panelPostsInfo.TabIndex = 2;
@@ -385,23 +410,13 @@
             this.messageTextBox.Size = new System.Drawing.Size(298, 32);
             this.messageTextBox.TabIndex = 5;
             // 
-            // buttonFetchPosts
-            // 
-            this.buttonFetchPosts.Location = new System.Drawing.Point(18, 13);
-            this.buttonFetchPosts.Name = "buttonFetchPosts";
-            this.buttonFetchPosts.Size = new System.Drawing.Size(179, 36);
-            this.buttonFetchPosts.TabIndex = 1;
-            this.buttonFetchPosts.Text = "Fetch Posts";
-            this.buttonFetchPosts.UseVisualStyleBackColor = true;
-            this.buttonFetchPosts.Click += new System.EventHandler(this.buttonFetchPosts_Click);
-            // 
             // listBoxPosts
             // 
             this.listBoxPosts.DataSource = this.postBindingSource;
             this.listBoxPosts.DisplayMember = "Name";
             this.listBoxPosts.FormattingEnabled = true;
             this.listBoxPosts.ItemHeight = 24;
-            this.listBoxPosts.Location = new System.Drawing.Point(18, 58);
+            this.listBoxPosts.Location = new System.Drawing.Point(15, 9);
             this.listBoxPosts.Name = "listBoxPosts";
             this.listBoxPosts.Size = new System.Drawing.Size(324, 244);
             this.listBoxPosts.TabIndex = 0;
@@ -472,7 +487,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.ClientSize = new System.Drawing.Size(880, 416);
+            this.ClientSize = new System.Drawing.Size(899, 416);
             this.Controls.Add(this.buttonLogout);
             this.Controls.Add(this.tabControlUpdateInfo);
             this.Controls.Add(this.flowLayoutPanel);
@@ -487,6 +502,7 @@
             this.tabFindByLocation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLocation)).EndInit();
             this.tabPagePosts.ResumeLayout(false);
+            this.panelBackground.ResumeLayout(false);
             this.panelPostsInfo.ResumeLayout(false);
             this.panelPostsInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.postBindingSource)).EndInit();
@@ -519,7 +535,6 @@
         private System.Windows.Forms.Button buttonCropAndSaveImg;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label labelEmail;
-        private System.Windows.Forms.Button buttonChangeInfo;
         private System.Windows.Forms.Label labelLastName;
         private System.Windows.Forms.TextBox textBoxLastName;
         private System.Windows.Forms.TabPage tabPagePosts;
@@ -527,9 +542,11 @@
         private System.Windows.Forms.DateTimePicker createdTimeDateTimePicker;
         private System.Windows.Forms.BindingSource postBindingSource;
         private System.Windows.Forms.TextBox messageTextBox;
-        private System.Windows.Forms.Button buttonFetchPosts;
         private System.Windows.Forms.ListBox listBoxPosts;
         private System.Windows.Forms.RichTextBox descriptionRichTextBox;
+        private System.Windows.Forms.Panel panelBackground;
+        private System.Windows.Forms.Button buttonChangeInfo;
+        private System.Windows.Forms.Button buttonFetchPosts;
     }
 }
 

@@ -36,26 +36,6 @@
             new Thread(addDataSourceToListBoxPosts).Start();
         }
 
-        //internal void setFirstName(string i_FirstName)
-        //{
-        //    textBoxFirstName.Text = i_FirstName;
-        //}
-
-        //internal void setLastName(string i_LastName)
-        //{
-        //    textBoxLastName.Text = i_LastName;
-        //}
-
-        //internal void setEmail(string i_Email)
-        //{
-        //    textBoxEmail.Text = i_Email;
-        //}
-
-        //internal void setBirthday(string i_Birthday)
-        //{
-        //    textBoxBirthday.Text = i_Birthday;
-        //}
-
         private void fetchOriginalUserInfo()
         {
             this.Invoke(new Action(() => this.Text = m_AppLogic.AppUser.LoggedInUser.FirstName + "'s Profile"));
@@ -254,15 +234,15 @@
             fetchUserInfo();
         }
 
+        private void addDataSourceToListBoxPosts()
+        {
+            postBindingSource.DataSource = m_AppLogic.AppUser.LoggedInUser.Posts;
+        }
+
         private void buttonFetchPosts_Click(object sender, EventArgs e)
         {
             listBoxPosts.Invoke(new Action(() => listBoxPosts.Visible = true));
             panelPostsInfo.Invoke(new Action(() => panelPostsInfo.Visible = true));
-        }
-
-        private void addDataSourceToListBoxPosts()
-        {
-            postBindingSource.DataSource = m_AppLogic.AppUser.LoggedInUser.Posts;
         }
     }
 }
